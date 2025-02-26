@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "Get Some Sun",
+    "slug": "get-sun",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/sun-logo.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/sun-logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFEBCD"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app needs access to your camera to take selfies for unlocking social media apps.",
+        "NSPhotoLibraryUsageDescription": "This app saves your selfies to your photo library.",
+        "NSPhotoLibraryAddUsageDescription": "This app saves your selfies to your photo library."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera to take selfies for unlocking social media apps."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to save your selfies to your photo library.",
+          "savePhotosPermission": "Allow $(PRODUCT_NAME) to save photos to your photo library.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      "expo-notifications"
+    ]
+  }
+}
